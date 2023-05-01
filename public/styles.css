@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('img/bible.png')
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0;
+  font-family: 'Lobster', cursive;
+  font-size: 4rem;
+  color: #F7EDE2;
+  text-shadow: 2px 2px 2px #000;
+ 
+}
+
+h3 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.5rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+}
