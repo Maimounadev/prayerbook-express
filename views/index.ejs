@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,24 +14,51 @@
 <body>
   <h1>Prayer Book</h1>
 
-  <h3>Post a Daily Prayer </h3>
+  <!-- Slot to post a prayer -->
+  <div class="prayer-post">
+    <h3>Post a Daily Prayer</h3>
+    <form action="/input" method="POST">
+      <input type="text" placeholder="From your Mouth to God's ears" name="msg">
+      <button type="submit">Submit ❤️</button>
+    </form>
+  </div>
 
-  <form action="/messages" method="POST">
-    <input type="text" placeholder="From your Mouth to God's ears" name="msg">
-    <button type="submit">Submit ❤️</button>
-  </form>
-
+  
+  <div class="bible-select">
+    <h3>Search for a Bible Verse</h3>
+    <form action="/input" method="POST">
+      <label for="search-term">Enter a search term:</label>
+      <select id="bookSelect">
+        <option value="John">John</option>
+        <option value="Romans">Romans</option>
+        <option value="Philippians">Philippians</option>
+        <option value="Genesis">Genesis</option>
+        <option value="Exodus">Exodus</option>
+        <option value="Psalms">Psalms</option>
+        <option value="Proverbs">Proverbs</option>
+        <option value="Isaiah">Isaiah</option>
+        <option value="Matthew">Matthew</option>
+        <option value="Mark">Mark</option>
+        <option value="Luke">Luke</option>
+        <option value="Acts">Acts</option>
+        <option value="1Corinthians">1 Corinthians</option>
+      </select> 
+      <h2 id="verseDisplay"></h2>
+      <button type="button" id="search-btn">Search</button>
+    </form>
+  </div>
 
   <ul class="messages">
-    <% for(var i=0; i<messages.length; i++) {%>
+    <% for(var i=0; i<post.length; i++) {%>
       <li class="message">
-        <span><%= messages[i].msg %></span>
-        <span><%= messages[i].heart %></span>
+        <span><%= post[i].msg %></span>
+        <span><%= post[i].heart %></span>
+        <span><%= post[i].verse %></span>
         <span><i class="fa fa-heart" aria-hidden="true"></i></span>
         <span><i class="fa fa-trash" aria-hidden="true"></i></span>
       </li>
     <% } %>
-    </ul>
+  </ul>
 
   <script src="main.js"></script>
 
