@@ -9,7 +9,7 @@ const bibleVerses = {
       verse: 16,
       text: 'For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.'
     },
-    // Add more verses from the book of John here...
+    
   ],
   Romans: [
     {
@@ -17,7 +17,7 @@ const bibleVerses = {
       verse: 28,
       text: 'And we know that in all things God works for the good of those who love him, who have been called according to his purpose.'
     },
-    // Add more verses from the book of Romans here...
+   
   ],
   Philippians: [
     {
@@ -34,7 +34,7 @@ const bibleVerses = {
       verse: 1,
       text: 'In the beginning, God created the heavens and the earth.'
     },
-    // Add more verses from the book of Genesis here...
+   
   ],
   Exodus: [
     {
@@ -42,7 +42,7 @@ const bibleVerses = {
       verse: 14,
       text: 'The LORD will fight for you; you need only to be still.'
     },
-    // Add more verses from the book of Exodus here...
+    
   ],
   Psalms: [
     {
@@ -50,7 +50,7 @@ const bibleVerses = {
       verse: 1,
       text: 'The LORD is my shepherd, I lack nothing.'
     },
-    // Add more verses from the book of Psalms here...
+   
   ],
   Proverbs: [
     {
@@ -58,7 +58,7 @@ const bibleVerses = {
       verse: 5,
       text: 'Trust in the LORD with all your heart and lean not on your own understanding.'
     },
-    // Add more verses from the book of Proverbs here...
+    
   ],
   Isaiah: [
     {
@@ -66,7 +66,7 @@ const bibleVerses = {
       verse: 31,
       text: 'But those who hope in the LORD will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint.'
     },
-    // Add more verses from the book of Isaiah here...
+    
   ],
   Matthew: [
     {
@@ -74,7 +74,7 @@ const bibleVerses = {
       verse: 16,
       text: 'In the same way, let your light shine before others, that they may see your good deeds and glorify your Father in heaven.'
     },
-    // Add more verses from the book of Matthew here...
+    
   ],
   Mark: [
     {
@@ -82,7 +82,7 @@ const bibleVerses = {
       verse: 27,
       text: 'Jesus looked at them and said, "With man this is impossible, but not with God; all things are possible with God."'
     },
-    // Add more verses from the book of Mark here...
+   
   ],
   Luke: [
     {
@@ -90,7 +90,7 @@ const bibleVerses = {
       verse: 31,
       text: 'Do to others as you would have them do to you.'
     },
-    // Add more verses from the book of Luke here...
+   
   ],
   Acts: [
     {
@@ -98,7 +98,7 @@ const bibleVerses = {
       verse: 8,
       text: 'But you will receive power when the Holy Spirit comes on you; and you will be my witnesses in Jerusalem, and in all Judea and Samaria, and to the ends of the earth.'
     },
-    // Add more verses from the book of Acts here...
+    
   ],
   
   
@@ -112,10 +112,10 @@ searchBtn.addEventListener('click', () => {
   const selectedBook = bookSelect.value;
   const selectedVerses = bibleVerses[selectedBook];
 
-  // Clear previous verse display
+ 
   verseDisplay.innerHTML = '';
 
-  // Display each verse of the selected book
+ 
   selectedVerses.forEach(verse => {
     const verseElement = document.createElement('p');
     verseElement.textContent = `Chapter ${verse.chapter}, Verse ${verse.verse}: ${verse.text}`;
